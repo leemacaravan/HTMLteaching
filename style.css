@@ -1,0 +1,51 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;   
+  padding: 20px;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+.grid-item {
+  border: transparent;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  font-family: Georgia, cursive;
+}
+body{
+  background-image:
+    url(https://garden.spoonflower.com/c/15020523/p/f/m/3bBEIioR__OO4CoeroctZZnX-mvNAPNCcy3qM-EkKplDCn1pWj8K0-U/Watercolor%20Bows%20%26%20Flowers%20Ditsy%20Floral%20Toss%20Grandmillennial%20Preppy%20Traditional%20by%20Pretty%20Festive%20Design%20PF127B.jpg)
+}
+header{
+  border: transparent;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #fafafa, 0 0 1em #d29bed, 0 0 0.2em #cb94f0;
+  font-family: Georgia, cursive;
+}
+footer{
+  text-align: center;
+  font-size: 40px; 
+  color: white; 
+  text-shadow: 1px 1px 2px #e8e3e3, 0 0 1em #c667f9, 0 0 0.2em #ad6af0;
+  font-family: Georgia, cursive;
+}
+img{
+  width: 300px;
+  height: 300px;
+  border: 5px solid #fbe4ee;
+}
+
+/*
+#Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+*/
+
+
+
+
+
