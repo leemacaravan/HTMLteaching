@@ -1,51 +1,80 @@
-.grid-container{
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5f5;
+  
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #E6A4B4;
+  color: white;
+  /* You can leave this alone if youd like it listed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  position: fixed;  /* Makes it always on top */
+  width: 100%;
+  box-sizing: border-box; /* Makes it slightly more centers */
+}
+
+/* Navigation Menu */
+.nav-menu {
+  list-style: none; /* Removes Bullet Points */
+  display: flex;
+  gap: 20px;
+}
+
+/* Navigation Links */
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Push main content down so the navbar doesn't overlap */
+main {
+  padding-top: 100px;
+}
+
+/* Grid layout for product cards on index.html */
+.grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;   
-  padding: 20px;
-  column-gap: 50px;
-  row-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 60px 20px;
 }
+
+/* Grid items */
 .grid-item {
-  border: transparent;
-  padding: 20px;
-  font-size: 30px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
   text-align: center;
-  font-family: Georgia, cursive;
 }
-body{
-  background-image:
-    url(https://garden.spoonflower.com/c/15020523/p/f/m/3bBEIioR__OO4CoeroctZZnX-mvNAPNCcy3qM-EkKplDCn1pWj8K0-U/Watercolor%20Bows%20%26%20Flowers%20Ditsy%20Floral%20Toss%20Grandmillennial%20Preppy%20Traditional%20by%20Pretty%20Festive%20Design%20PF127B.jpg)
+
+.grid-item img {
+  width: 100%;
+  border-radius: 10px;
 }
-header{
-  border: transparent;
-  padding: 10px;
-  font-size: 30px;
+
+/* About page styles */
+.about {
+  padding: 60px 20px;
   text-align: center;
-  text-shadow: 1px 1px 2px #fafafa, 0 0 1em #d29bed, 0 0 0.2em #cb94f0;
-  font-family: Georgia, cursive;
 }
-footer{
+
+/* Login page styles */
+.login {
+  padding: 60px 20px;
   text-align: center;
-  font-size: 40px; 
-  color: white; 
-  text-shadow: 1px 1px 2px #e8e3e3, 0 0 1em #c667f9, 0 0 0.2em #ad6af0;
-  font-family: Georgia, cursive;
-}
-img{
-  width: 300px;
-  height: 300px;
-  border: 5px solid #fbe4ee;
 }
 
-/*
-#Form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Login page styles */
+.signup {
+  padding: 60px 20px;
+  text-align: center;
 }
-*/
-
-
-
-
-
