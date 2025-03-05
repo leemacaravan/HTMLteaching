@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Head Section (Website Info) -->
+  <meta charset="utf-8"> <!-- Supports all text characters (letters, numbers, emojis) -->
+  <meta name="viewport" content="width=device-width"> <!-- Makes the page responsive for all screen sizes -->
+  <title>Login - Beauty Recommendations</title> <!-- The title that appears on the browser tab -->
+  <link href="style.css" rel="stylesheet" type="text/css"/> <!-- Connects this HTML file to style.css -->
+</head>
+<body>
+
+  <!-- Navigation Bar (Menu at the Top) -->
+  <header>
+    <nav class="navbar"> <!-- Navigation bar to help users move between pages -->
+      <h1 class="logo">Beauty Recommendations</h1> <!-- The website's title/logo -->
+      <ul class="nav-menu"> <!-- Creates a list of links in the navigation bar -->
+        <li><a href="index.html">Home</a></li> <!-- Link to Home page -->
+        <li><a href="about.html">About Me</a></li> <!-- Link to About Me page -->
+        <li><a href="login.html">Login</a></li> <!-- Link to the Login page (this page) -->
+        <li><a href="#contact">Contact</a></li> <!-- Link to the Contact section at the bottom -->
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Login Form (Main Content) -->
+  <main>
+    <section class="login"> <!-- A section that holds the login form -->
+      <h2>Login</h2> <!-- A heading that says "Login" -->
+
+      <form id="loginForm"> <!-- The form where users enter their login details -->
+
+        <!-- Username Field -->
+        <label for="username">Username:</label><br> <!-- A label for the username field -->
+        <input type="text" id="username" name="username" required><br> 
+        <!-- An input box where users type their username -->
+        <!-- required → Makes sure users can't submit an empty form -->
+
+        <!-- Password Field -->
+        <label for="password">Password:</label><br> <!-- A label for the password field -->
+        <input type="password" id="password" name="password" required><br><br> 
+        <!-- An input box where users type their password -->
+        <!-- The text hides while typing because it's a password field -->
+
+        <!-- Submit Button -->
+        <input type="submit" value="Log In"> <!-- Clicking this button submits the form -->
+
+      </form>
+
+      <!-- Message with a link to sign up if the user doesn't have an account -->
+      <p>Don't have an account? <a href="signup.html">Sign Up here</a>.</p> 
+    </section>
+  </main>
+  
+  <!-- Footer (Bottom of the Page) -->
+  <footer id="contact">
+    <p>© 2025 Beauty Recommendations by Leema Caravan</p> <!-- Copyright text -->
+  </footer>
+  
+  <!-- JavaScript for Login Functionality -->
+  <script>
+    // Get the login form and listen for when the user clicks "Log In"
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Stops the page from refreshing when the form is submitted
+
+      // Get the values the user typed into the username and password fields
+      var username = document.getElementById('username').value; // Gets the text inside the username box
+      var password = document.getElementById('password').value; // Gets the text inside the password box
+
+      // Retrieve the stored username and password from the browser
+      var storedUser = localStorage.getItem("username"); // Gets the saved username from the browser
+      var storedPassword = localStorage.getItem("password"); // Gets the saved password from the browser
+
+      // Check if the username and password match the saved ones
+      if(username === storedUser && password === storedPassword){
+        alert("Login Successful!"); // Pops up a message
+        window.location.href = "about.html"; // Redirects the user to the About Me page
+      } else {
+        alert("Invalid credentials. Please try again or sign up if you haven't registered."); 
+        // Shows an alert if the username or password is incorrect
+      }
+    });
+  </script>
+
+</body>
+</html>
