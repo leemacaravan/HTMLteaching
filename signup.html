@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sign Up - Beauty Recommendations</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/> <!-- Connects this HTML file to the CSS file for styling -->
+</head>
+<body>
+
+  <!-- HEADER: Contains the navigation bar -->
+  <header>
+    <nav class="navbar"> <!-- This is the navigation bar -->
+      <h1 class="logo">Beauty Recommendations</h1> <!-- Website title/logo -->
+      <ul class="nav-menu"> <!-- List of navigation links -->
+        <li><a href="index.html">Home</a></li> <!-- Link to Home Page -->
+        <li><a href="about.html">About Me</a></li> <!-- Link to About Me Page -->
+        <li><a href="login.html">Login</a></li> <!-- Link to Login Page -->
+        <li><a href="#contact">Contact</a></li> <!-- Link to Contact Section -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT: The Sign-Up Form -->
+  <main>
+    <section class="signup"> <!-- Sign-up section -->
+      <h2>Sign Up</h2> <!-- Sign-up heading -->
+
+      <!-- FORM: Users enter their sign-up details here -->
+      <form id="signupForm"> 
+        <!-- Username Field -->
+        <label for="username">Username:</label><br> 
+        <input type="text" id="username" required><br> 
+        <!-- An input box where users type their username -->
+        <!-- required → Makes sure users can't submit an empty form -->
+
+        <!-- Password Field -->
+        <label for="password">Password:</label><br> 
+        <input type="password" id="password" required><br><br> 
+        <!-- An input box where users type their password -->
+        <!-- The text hides while typing because it's a password field -->
+
+        <!-- Submit Button -->
+        <input type="submit" value="Sign Up"> 
+        <!-- Clicking this button submits the form -->
+      </form>
+
+      <!-- Message with a link to log in if the user already has an account -->
+      <p>Already have an account? <a href="login.html">Log In here</a>.</p> 
+    </section>
+  </main>
+
+  <!-- FOOTER: Bottom section of the page -->
+  <footer>
+    <p>© 2025 Beauty Recommendations by Leema Caravan</p> <!-- Copyright text -->
+  </footer>
+
+  <!-- JavaScript for handling the sign-up form -->
+  <script>
+    // Listen for the sign-up form submission
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+       // Prevents the form from refreshing the page
+       e.preventDefault();
+
+      // Get the username and password values from the input boxes
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Save the username and password in localStorage (browser storage)
+      localStorage.setItem("username", username); // Stores the username in the browser
+      localStorage.setItem("password", password); // Stores the password in the browser
+
+      // Alert the user that their sign-up was successful
+      alert("Sign up successful! You can now log in.");
+
+      // Redirects the user to the login page
+      window.location.href = "login.html";
+    });
+  </script>
+
+</body>
+</html>
