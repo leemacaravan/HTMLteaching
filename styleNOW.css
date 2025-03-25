@@ -1,0 +1,96 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5f5;
+  /* IF MARLOW WANTS BACKGROUND IMAGE: */
+  Background-image: url(“has to start with https”);
+
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #E6A4B4;
+  color: white;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 30px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding-right: 30px;
+}
+
+/* Navigation Links */
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+/* Push main content down so the navbar doesn't overlap */
+main {
+  padding-top: 100px;
+}
+
+/* Grid layout for product cards on index.html */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 60px 20px;
+}
+
+/* Grid items */
+.grid-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* About page styles */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Login page styles */
+.login {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Login page styles */
+.signup {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #805b5b;
+  
+  
+}
+
+
+.navbar li a{
+  
+}
